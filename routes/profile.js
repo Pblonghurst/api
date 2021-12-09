@@ -12,12 +12,11 @@ router.get('/profile', verify, async (req, res) => {
     }
 });
 
-
 // be careful with this 
 // updates Wallet
-router.patch('/profile', verify, async (req, res) => {
+router.patch('/profile', verify, (req, res) => {
     try{
-        const updatedWallet = await User.updateOne( 
+        const updatedWallet = User.updateOne( 
                 { $set: {name: req.body.name} }
             );
         res.send(updatedWallet);
