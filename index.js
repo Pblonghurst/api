@@ -29,6 +29,7 @@ app.use('/api/user', authRoute);
 app.use('/api/user', accRoute);
 app.use('/api/user', userRoute);
 
+// server start
 app.listen(
     PORT, () => console.log('its live')
 )

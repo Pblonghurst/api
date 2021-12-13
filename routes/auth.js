@@ -77,7 +77,7 @@ router.post('/login', async (req, res) => {
 
     // jsonwebtoken creation/assign
     const token = jtoken.sign({ _id: user._id }, process.env.TOKEN_SECRET, { expiresIn: '30min'});
-    res.header('auth-token', token).send(`Welcom back, ${user.name}`);
+    res.header('auth-token', token).send(`Welcome back, ${user.name}`);
 });
 
 module.exports = router 
