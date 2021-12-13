@@ -3,7 +3,7 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jtoken = require('jsonwebtoken');
 
-// validation 
+// validations
 const Joi = require('@hapi/joi');
 // Register validation
 const registerSchema = Joi.object ({
