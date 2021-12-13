@@ -24,7 +24,7 @@ const authRoute = require('./routes/auth');
 const accRoute = require('./routes/profile');
 const userRoute = require('./routes/allusers');
 
-// route middleware 
+// routes
 app.use('/api/user', authRoute); 
 app.use('/api/user', accRoute);
 app.use('/api/user', userRoute);

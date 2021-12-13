@@ -76,7 +76,7 @@ router.post('/login', async (req, res) => {
     if(!validPass) return res.status(400).send(`password incorrect`);
 
     // jsonwebtoken creation/assign
-    const token = jtoken.sign({ _id: user._id }, process.env.TOKEN_SECRET, { expiresIn: '30min'});
+    const token = jtoken.sign({ _id: user._id }, process.env.TOKEN_SECRET, { expiresIn: '5min'});
     res.header('auth-token', token).send(`Welcome back, ${user.name}`);
 });
 
